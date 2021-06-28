@@ -1,4 +1,5 @@
 {
   "API_KEY": "b18572d145fff84aae725a0808327b90",
-  "WEATHER_API": "https://api.openweathermap.org/data/2.5/"
+  "WEATHER_API": "https://api.openweathermap.org/data/2.5",
+  "COORDS": { "lat": 37.9838, "lon": 23.7275 }
 }

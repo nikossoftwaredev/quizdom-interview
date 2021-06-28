@@ -1,8 +1,9 @@
 import React from "react";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+import { StyledTabs, StyledTab } from "../styles/genericStyles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import HourList from "./HourList";
+import DayList from "./DayList";
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
@@ -33,19 +34,20 @@ const WeatherTabPanel = ({ weatherData = {} }) => {
 
   return (
     <div>
-      <Tabs
+      <StyledTabs
+        centered
         value={value}
         onChange={handleChange}
         aria-label="simple tabs example"
       >
-        <Tab label="Today" />
-        <Tab label="5 Days" />
-      </Tabs>
+        <StyledTab label="Today" />
+        <StyledTab label="5 Days" />
+      </StyledTabs>
       <TabPanel value={value} index={0}>
-        Item One
+        <HourList />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <DayList />
       </TabPanel>
     </div>
   );

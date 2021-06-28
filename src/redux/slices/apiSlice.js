@@ -8,7 +8,7 @@ export const apiGET = createAsyncThunk("api/get", async (payload, thunkAPI) => {
   try {
     const url = `${privateConfig.WEATHER_API}/${payload.path}${
       payload.query
-        ? `/?${qs.stringify(payload.query)}&appid=${privateConfig.API_KEY}`
+        ? `?${qs.stringify(payload.query)}&appid=${privateConfig.API_KEY}`
         : ""
     }`;
     const response = await axios.get(url);
@@ -40,9 +40,6 @@ export const apiSlice = createSlice({
 
 export const { increment, decrement, incrementByAmount } = apiSlice.actions;
 
-// The function below is called a selector and allows us to select a value from
-// the state. Selectors can also be defined inline where they're used instead of
-// in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const getApiResource = (state, path) => {
   const pathParts = path.split("/").filter((path) => path !== "");
 

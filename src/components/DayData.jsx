@@ -10,20 +10,20 @@ const DayData = ({ weatherData = {} }) => {
       <Grid item>
         <img
           alt="Weather Icon"
-          src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+          src={`http://openweathermap.org/img/wn/${weatherData?.current?.weather[0].icon}@2x.png`}
         />
       </Grid>
       <Grid item>
-        <Text variant="h1" component="span">
-          {kelvinToCelsius(weatherData.main.temp)}
-        </Text>
         <Text variant="h2" component="span">
+          {kelvinToCelsius(weatherData.current.temp)}
+        </Text>
+        <Text variant="h3" component="span">
           <sup>℃</sup>
         </Text>
       </Grid>
       <Grid item>
         <Text variant="h4" align="center">
-          {weatherData.name}, {weatherData.sys.country}
+          Athens, GR
         </Text>
       </Grid>
       <Grid item>
@@ -33,10 +33,10 @@ const DayData = ({ weatherData = {} }) => {
       </Grid>
       <Grid item style={{ display: "flex", justifyContent: "space-around" }}>
         <Text textcolor={colors.gray} align="center" component="span">
-          Feels like {kelvinToCelsius(weatherData.main.feels_like)}℃
+          Feels like {kelvinToCelsius(weatherData.current.feels_like)}℃
         </Text>
         <Text textcolor={colors.gray} align="center" component="span">
-          Humidity {weatherData.main.humidity} %
+          Humidity {weatherData.current.humidity} %
         </Text>
       </Grid>
     </Grid>
