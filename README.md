@@ -1,10 +1,56 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Quizdom Interview project
+
+## Description
+
+Technical Assignment
+
+1. Project: Weather App
+   To help the world plan for the future, you decide to build a
+   weather forecast application. The application should allow
+   users to view the current weather, an hourly forecast for the
+   next 5 hours and a 5-day weather forecast, for Athens. You
+   decide to use React.js (you can use CRA). Your main target is
+   users on their smart phone (Android / iOS).
+2. Minimal functionality
+
+- The user must be able to see the current weather for Athens
+- The user must be able to see the weather forecast for the next
+  5 hours for Athens
+- The user must be able to see a 5-day weather forecast for
+  Athens
+
+3. Deliverables
+
+- The project with the source code, resource files and any thirdparty libraries used
+- A short explanation of you design choices
+- Anything extra you would have done given more time
+- Anything else you feel we should know
+
+4. Additional information and suggestions
+
+- You don’t have to impress by adding much on top of the point
+  2 “Minimal functionality”, what we look at foremost is your
+  engineering and coding skills (clean, well executed code).
+  Equally important are best practice development techniques,
+  good look and feel and usability (keep UI/UX in mind). And
+  lastly your approach on solving problems.
+- When you develop the app only focus at the very last firmware
+  and devices on the market.
+
+5. Resources
+   To download weather information please register and use the
+   following API:
+   https://openweathermap.org/api
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Installs all the dependencies
 
 ### `npm start`
 
