@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import colors from "./colors";
-import { Card, Tab, Tabs, Typography, withStyles } from "@material-ui/core";
+import { Tab, Tabs, Typography, withStyles } from "@material-ui/core";
 
 export const MainContainer = styled.div`
   height: 100vh;
