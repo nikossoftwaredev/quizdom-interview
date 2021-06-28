@@ -40,8 +40,8 @@ const WeatherTabPanel = ({ weatherData = {} }) => {
         onChange={handleChange}
         aria-label="simple tabs example"
       >
-        <StyledTab label="Today" />
-        <StyledTab label="5 Days" />
+        <StyledTab sel={+(value === 0)} label="Today" />
+        <StyledTab sel={+(value === 1)} label="5 Days" />
       </StyledTabs>
       <TabPanel value={value} index={0}>
         <HourList />

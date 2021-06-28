@@ -50,19 +50,20 @@ export const StyledTabs = withStyles({
   },
 })(Tabs);
 
-export const StyledTab = withStyles({
-  root: {
-    fontFamily: "Roboto",
-    opacity: 1,
-    color: colors.gray,
-    "&$:selected": {
-      color: colors.orange,
-    },
-    "&:hover": {
-      color: colors.orange,
-    },
-    "&:focus": {
-      color: colors.orange,
-    },
-  },
-})(Tab);
+export const StyledTab = styled(Tab)`
+  font-family: Roboto;
+  color: ${colors.gray};
+
+  color: ${(props) => props.sel && colors.orange};
+
+  &:selected {
+    color: ${colors.orange};
+  }
+
+  &:hover {
+    color: ${colors.orange};
+  }
+  &:focus {
+    color: ${colors.orange};
+  }
+`;

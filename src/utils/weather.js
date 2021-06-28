@@ -15,5 +15,8 @@ export const timeFromTimeZone = (timeZone) => {
 export const addTimeDifference = (dt, type) => {
   return type === "day"
     ? days[new Date(dt * 1000).getDay()]
-    : new Date(dt * 1000).toLocaleTimeString([], { hour: "2-digit" });
+    : new Date(dt * 1000).toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
 };
