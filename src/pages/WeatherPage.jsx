@@ -46,29 +46,27 @@ const WeatherPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <MainContainer style={{ backgroundColor: colors.black }}>
-        {ready ? (
-          <>
-            <DayData weatherData={weatherData} />
-            <WeatherTabPanel />
-          </>
-        ) : (
-          <div
-            style={{
-              display: "flex",
-              height: "100%",
-              justifyContent: "center",
-              alignItems: "center",
-              flexDirection: "column",
-            }}
-          >
-            <Text align="center">Fetching Data</Text>
-            <CircularProgress color="secondary" />
-          </div>
-        )}
-      </MainContainer>
-    </div>
+    <MainContainer style={{ backgroundColor: colors.black }}>
+      {ready ? (
+        <>
+          <DayData weatherData={weatherData} />
+          <WeatherTabPanel />
+        </>
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            height: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <Text align="center">Fetching Data</Text>
+          <CircularProgress color="secondary" />
+        </div>
+      )}
+    </MainContainer>
   );
 };
 
