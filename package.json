@@ -24,6 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "ebuild": "node ./build.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -44,5 +45,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.22",
+    "esbuild-plugin-manifest": "^0.5.0",
+    "node-stdlib-browser": "^1.2.0"
   }
 }
